@@ -16,10 +16,15 @@ CausalKnowledgeBase, causal knowledge base including causal pairs extracted from
 5、以原因词列表为中心，统计该词语结果词列表中的词的pmi值，pmi值的计算公式：log(p(x,y)/(p(x)*p(y)))    
 6、按照pmi值高低，对每个原因词的因果搭配信息写入文件，设置topn=200，只保留每个词的前200个频繁结果词。
 
+# 项目脚本
+
+结果文件为：data/causal_collocatin.json  
+
 
 # 项目运行结果
 
-1，搭配文件：
+1、搭配文件：pmi_word有3项内容构成，分别为结果词，结果词性以及结果词语原因词之间的pmi值，用于衡量两者之间关联强度。  
+
 	{ "_id" : ObjectId("5cbd878b831b975b8da3d6cc"), 
 	"word" : "自杀", 
 	"word_tag" : "v",
@@ -39,7 +44,7 @@ CausalKnowledgeBase, causal knowledge base including causal pairs extracted from
 	[ "赞扬", "v", 17.28306729430643 ]  }
 
 
-2, 因果搭配举例：
+2、因果搭配举例：
 
 | 原因词 | 结果词 |
 | :--- | :---: |
